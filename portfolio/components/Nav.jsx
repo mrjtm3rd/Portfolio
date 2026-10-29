@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Sparkle from "@/components/Sparkle";
 
 // Each id must match a <Section id="..."> in app/page.jsx
 const LINKS = [
@@ -60,7 +59,6 @@ export default function Nav({ home, name }) {
           onClick={() => setOpen(false)}
           className="pointer-events-auto flex items-center gap-2.5 rounded-full border border-line bg-page/90 px-5 py-3 text-sm font-bold backdrop-blur"
         >
-          <Sparkle size={16} className="text-cream" />
           {name}
         </a>
 

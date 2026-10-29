@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Section, { Heading } from "@/components/Section";
-import Sparkle from "@/components/Sparkle";
 import ExpandableText from "@/components/ExpandableText";
 import {
   home,
@@ -15,13 +14,11 @@ import {
 
 // ---- Edit these to whatever you want ----
 const ABOUT_HEADING = "Learning by building real things.";
-const ABOUT_PILL = "Open for internships";
-const PROJECTS_ASIDE = "A few things I've built so far.";
 const ADDRESS = "Your street, Barangay, City, Philippines"; // <- put your real address here
 // -----------------------------------------
 
 // Project overrides: applied automatically by project name, so no need to touch data/content
-const SPLP_IMAGE = "/projects/proj1.jpg"; // file: public/projects/proj1.jpg
+const SPLP_IMAGE = "proj1.jpg"; // file: public/projects/proj1.jpg
 const SPLP_DESCRIPTION =
   "Smart personalized learning pathway system for students to help them acquire learning materials online and generated quizzes for reviewers. It also showcases their strengths and weaknesses between subjects through visual analytics, and dynamically updates their study schedule with bite-sized lessons to bridge knowledge gaps before exams.";
 const withOverrides = (p) =>
@@ -97,10 +94,6 @@ export default function Page() {
                   className="absolute inset-0 bg-[url('/ako.jpg')] bg-cover bg-center"
                 />
               </div>
-              <span className="absolute -bottom-5 right-5 flex items-center gap-2.5 rounded-full bg-accent px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.14em]">
-                <Sparkle size={14} className="text-cream" />
-                {ABOUT_PILL}
-              </span>
             </div>
 
             <div>
@@ -113,7 +106,7 @@ export default function Page() {
         </Section>
 
         {/* PROJECTS */}
-        <Section id="projects" label="projects" title="Recent projects" aside={PROJECTS_ASIDE}>
+        <Section id="projects" label="projects" title="Recent projects">
           <ul className="grid gap-x-5 gap-y-14 md:grid-cols-2">
             {projectList.map((p, i) => (
               <li key={p.name} className="group">

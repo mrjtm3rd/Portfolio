@@ -1,8 +1,6 @@
-import Sparkle from "@/components/Sparkle";
 import { hero, home } from "@/data/content";
 
 // ---- Edit this text to whatever you want ----
-const STATUS = "Open to internships";
 const EYEBROW = "IT student — Manila";
 const TAGLINE = "Building simple, useful systems & websites.";
 const ACTIONS = [
@@ -62,11 +60,6 @@ export default function Hero() {
             aria-label={hero.name}
             className="absolute inset-0 bg-[url('/1.jpg')] bg-cover bg-center"
           />
-
-          <span className="absolute left-5 top-5 z-10 flex items-center gap-2 rounded-full bg-black/60 px-3.5 py-2 font-mono text-[11px] font-bold uppercase tracking-[0.14em] backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-accent" />
-            {STATUS}
-          </span>
         </div>
 
         {/* right: intro panel */}
@@ -75,7 +68,6 @@ export default function Hero() {
           style={{ animationDelay: "0.25s" }}
         >
           <p className="flex items-center gap-3 font-mono text-xs font-bold uppercase tracking-[0.18em] text-dim">
-            <Sparkle size={16} />
             {EYEBROW}
           </p>
 
